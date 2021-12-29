@@ -49,12 +49,14 @@
 \def\senderaddressb#1{\gdef\@senderaddressb{#1}}
 
 %% Make a address-side
-\newcommand{\addaddress}[5] {
+\newcommand{\addaddress}[7] {
   % #1 : Receiver name
   % #2 : Receiver name suffix
   % #3 : Receiver postcode
   % #4 : Receiver address 1
   % #5 : Receiver address 2
+  % #6 : Receiver name 2
+  % #7 : Receiver name suffix 2
   \clearpage
   \refstepcounter{section}
   \addcontentsline{toc}{section}{#1}
@@ -70,12 +72,14 @@
         \hbox to 6.8truemm{\hfil\StrChar{#3}{6}\hfil}%
         \hbox to 6.8truemm{\hfil\StrChar{#3}{7}\hfil}%
     }\vfil}}
-    \put(83,120){\fontsize{15pt}{0pt}\selectfont%
+    \put(83,120){\fontsize{12.5pt}{0pt}\selectfont%
         \parbox<t>[t]{90truemm}{#4}}
-    \put(75,120){\fontsize{15pt}{0pt}\selectfont%
+    \put(75,120){\fontsize{12.5pt}{0pt}\selectfont%
         \parbox<t>[t]{90truemm}{\hfil#5}}
     \put(50,120){\kanjiskip=.3zw\fontsize{27pt}{0pt}\selectfont%
         \parbox<t>[t]{90truemm}{\hfil#1\hskip1zw#2}\hfil}
+    \put(40,120){\kanjiskip=.3zw\fontsize{27pt}{0pt}\selectfont%
+        \parbox<t>[t]{90truemm}{\hfil#6\hskip1zw#7}\hfil}
     \put(25,85){\fontsize{12pt}{0pt}\selectfont%
         \parbox<t>[t]{55truemm}{\@senderaddressa}}
     \put(19,85){\fontsize{12pt}{0pt}\selectfont%
