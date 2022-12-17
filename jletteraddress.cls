@@ -44,6 +44,7 @@
 
 %% Sender macros
 \def\sendername#1{\gdef\@sendername{#1}}
+def\sendernameb#1{\gdef\@sendernameb{#1}}
 \def\senderpostcode#1{\gdef\@senderpostcode{#1}}
 \def\senderaddressa#1{\gdef\@senderaddressa{#1}}
 \def\senderaddressb#1{\gdef\@senderaddressb{#1}}
@@ -86,6 +87,8 @@
         \parbox<t>[t]{55truemm}{\@senderaddressb}}
     \put(10,85){\kanjiskip=0.3zw\fontsize{15pt}{0pt}\selectfont%
         \parbox<t>[t]{55truemm}{\hfil\@sendername}\hfil}
+    \put(5,85){\kanjiskip=0.3zw\fontsize{15pt}{0pt}\selectfont%
+  	    \parbox<t>[t]{55truemm}{\hfil\@sendernameb}\hfil}
     \put(4.5,25){ %
       \vtop to 6.5truemm{\vfil\hbox{\fontsize{12pt}{0pt}\selectfont%
         \hbox to 4truemm{\hfil\StrChar{\@senderpostcode}{1}\hfil}%
